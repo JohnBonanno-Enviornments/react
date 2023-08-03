@@ -1,0 +1,10 @@
+// run mock db with npx json-server --watch db.json 
+{
+  "database": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "description": "some mocked server data"
+    }
+  ]
+}

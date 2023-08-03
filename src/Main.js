@@ -4,12 +4,26 @@ import MockApi from "./Api/MockApi.js";
 
 
 const ItemFrame = styled.div`
+    width: 170px;
     border: solid 1px gray;
     padding: 10px;
     margin: 15px 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px grey;
     font-family: Arial;
+    text-align: center;
+`;
+
+
+const pageFrame = styled.div`
+    width: 400;
+    border: solid 1px gray;
+    padding: 10px;
+    margin: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
+    font-family: Arial;
+    text-align: center;
 `;
 
 const Input = styled.input`
@@ -49,21 +63,8 @@ const Items = ({ items }) => {
     await MockApi().then(data=>{
         if(data[0].id==items.id){
             setData(data[0]);
-            console.log("TRUE")
         };
     })
-    
-
-
-    // fetch("http://localhost:3000/database")
-    // .then(response => response.json())
-    // .then((responsedata)=>{
-    //     if(responsedata[0].id==items.id){
-    //         setData(responsedata[0]);
-    //     };
-    // });
-  
-
   }
 
   return (
